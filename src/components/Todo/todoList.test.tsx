@@ -2,10 +2,12 @@ import {
   cleanup,
   fireEvent,
   render,
+  renderHook,
   screen,
   waitFor,
   waitForElementToBeRemoved,
 } from '@testing-library/react';
+import { useState } from 'react';
 
 import { describe, it, afterAll } from '@jest/globals';
 
@@ -22,7 +24,6 @@ describe('투두리스트', () => {
   it('투두 등록 테스트', async () => {
     // 컴포넌트가 제대로 렌더링 됐는지 확인하기 위해 내용 확인
     screen.getByText('TODO 리스트'); // 성공
-    screen.getByText('첫번째 아이템'); // 성공
 
     // 아이템 추가 버튼 클릭
     const addButton = screen.getByTestId('addButton');
