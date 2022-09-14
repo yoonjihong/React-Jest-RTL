@@ -10,4 +10,9 @@ module.exports = {
     '~assets/(.*)$': '<rootDir>/src/assets/$1',
     '~pages/(.*)$': '<rootDir>/src/pages/$1',
   },
+  coverageThreshold: {
+    global: {
+      lines: 80,
+    },
+  },
 };
