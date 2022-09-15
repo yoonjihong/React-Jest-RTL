@@ -13,7 +13,7 @@ jobs:
         id: coverage
         with:
           output: report-markdown
-          github-token: ${{ screts.SECRET_TOKEN }}
+          github-token: ${{ secrets.SECRET_TOKEN }}
           package-manager: yarn
           coverage-file: ./coverage/report.json
           base-coverage-file: ./coverage/master/report.json
