@@ -1,11 +1,11 @@
-name: autoBuildTest
+name: jestTest
 
 on:
   push:
     branches: [main]
 
 jobs:
-  ass:
+  testCoverage:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -13,6 +13,10 @@ jobs:
         id: coverage
         with:
           output: report-markdown
+          github-token: ${{ screts.SECRET_TOKEN }}
+          package-manager: yarn
+          coverage-file: ./coverage/report.json
+          base-coverage-file: ./coverage/master/report.json
       - uses: marocchino/sticky-pull-request-comment@v2
         with:
           message: ${{ steps.coverage.outputs.report }}
