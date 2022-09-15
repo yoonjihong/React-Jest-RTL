@@ -18,7 +18,7 @@ jobs:
           output: report-markdown
           package-manager: yarn
 
-      - name: pull request
+      - name: pull request test
         uses: marocchino/sticky-pull-request-comment@v2
         with:
           message: ${{ steps.coverage.outputs.report }}
