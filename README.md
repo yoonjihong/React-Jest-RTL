@@ -1,4 +1,4 @@
-# FrontEnd TDD - Jest + ReactTestingLibrary
+# FrontEnd TDD - Jest + RTL
 jest와 react-testing-library를  컴포넌트 테스트 코드 예제입니다.
 
 ## 개발 서버 시작
