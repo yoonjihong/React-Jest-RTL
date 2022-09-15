@@ -10,8 +10,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - run: yarn
+
       # - name: Install modules
-      #   run: yarn
       # - run: yarn
 
       - name: Run tests
