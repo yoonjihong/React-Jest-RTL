@@ -9,10 +9,11 @@ const Home = () => {
   return (
     <div>
       <Todo.List list={list} />
+
       <br />
       <hr />
       <br />
-      테스트1 테스트2 테스트3
+
       <AddForm
         afterSubmit={data => {
           setList(prev => [...prev, data]);
