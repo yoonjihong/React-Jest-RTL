@@ -1,4 +1,4 @@
-name: Jest
+name: Check build & Jest
 
 on:
   pull_request:
