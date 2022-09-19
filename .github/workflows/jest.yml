@@ -3,6 +3,8 @@ name: Jest
 on:
   pull_request:
     branches: [main]
+  push:
+    branches: [test]
 
 jobs:
   jest:
@@ -10,7 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - run: yarn
+      - name: build
+        run: yarn build
 
-      - name: Jest Test 22
+      - name: module install
+        run: yarn
+
+      - name: Jest Test
         run: yarn test
