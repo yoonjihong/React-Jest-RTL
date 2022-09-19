@@ -12,11 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: module install
-        run: yarn
-
-      - name: Build
-        run: yarn build
+      
 
       - name: Jest
         run: yarn test
